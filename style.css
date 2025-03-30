@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    background-image: url('https://images.vexels.com/media/users/3/330282/isolated/preview/0a4487c11266af54fc08eb6bfcffd6d0-computer-screen-featuring-a-coding-symbol.png');
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-position: center; /* Keeps the image centered */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
+    filter: blur(0); /* Ensures no blur effect is applied */
+}
+
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-line: calc();
+    color: white; /* Changed text color to white */
+}
+
+h1:hover {
+    color: yellowgreen;
+}
+
+p, h2, li, a {
+    color: whitesmoke; /* Changed text color to white */
+}
+
+.pic {
+    width: 150px; /* Adjust size */
+    height: 150px; /* Make height equal to width */
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures the image is properly cropped */
+    border: 3px solid #333; /* Optional border */
+
+    /* Move image to the right */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.social:hover {
+    color: chartreuse;
+    cursor: pointer; /* Optional: Changes cursor to pointer on hover */
+}
