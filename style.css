@@ -4,40 +4,89 @@ body {
     background-size: cover; /* Ensures the image covers the entire body */
     background-position: center; /* Keeps the image centered */
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
     filter: blur(0); /* Ensures no blur effect is applied */
+    perspective: 1000px;
 }
 
+section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+section:hover {
+    transform: translateZ(20px) rotateX(5deg);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
 
 h1 {
     text-align: center;
     text-decoration: underline;
-    text-decoration-line: calc();
-    color: white; /* Changed text color to white */
+    color: white;
 }
 
 h1:hover {
     color: yellowgreen;
 }
 
-p, h2, li, a {
-    color: whitesmoke; /* Changed text color to white */
+h2 {
+    color: darkgoldenrod;
+}
+
+p, li, a {
+    color: whitesmoke;
 }
 
 .pic {
-    width: 150px; /* Adjust size */
-    height: 150px; /* Make height equal to width */
-    border-radius: 50%; /* Makes it circular */
-    object-fit: cover; /* Ensures the image is properly cropped */
-    border: 3px solid #333; /* Optional border */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
 
-    /* Move image to the right */
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.social {
+    display: inline-block;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
 }
 
 .social:hover {
     color: chartreuse;
-    cursor: pointer; /* Optional: Changes cursor to pointer on hover */
+    cursor: pointer;
+}
+
+ul li {
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+}
+
+ul li:hover {
+    transform: translateZ(5px);
+    color: #00ffff;
+}
+
+#contact {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+#contact:hover {
+    transform: translateZ(15px) rotateY(5deg);
+}
+
+.profile-image {
+    position: relative;
+    height: 0;
+    margin: 0;
+    padding: 0;
 }
